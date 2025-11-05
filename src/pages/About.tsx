@@ -3,18 +3,23 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-// Mock data for annual statements
+// Annual statements - Replace these paths with your actual PDF files
+// Place your PDF files in the public/statements/ folder
 const annualStatements = [
-  { year: 2024, title: "Annual Financial Statement 2024", size: "2.4 MB", date: "March 2024" },
-  { year: 2023, title: "Annual Financial Statement 2023", size: "2.1 MB", date: "March 2023" },
-  { year: 2022, title: "Annual Financial Statement 2022", size: "1.9 MB", date: "March 2022" },
-  { year: 2021, title: "Annual Financial Statement 2021", size: "1.8 MB", date: "March 2021" },
+  { year: 2024, title: "Annual Financial Statement 2024", size: "2.4 MB", date: "March 2024", path: "/statements/annual-2024.pdf" },
+  { year: 2023, title: "Annual Financial Statement 2023", size: "2.1 MB", date: "March 2023", path: "/statements/annual-2023.pdf" },
+  { year: 2022, title: "Annual Financial Statement 2022", size: "1.9 MB", date: "March 2022", path: "/statements/annual-2022.pdf" },
+  { year: 2021, title: "Annual Financial Statement 2021", size: "1.8 MB", date: "March 2021", path: "/statements/annual-2021.pdf" },
 ];
 
 const About = () => {
-  const handleDownload = (year: number) => {
-    // In a real application, this would trigger an actual file download
-    console.log(`Downloading statement for ${year}`);
+  const handleDownload = (path: string, title: string) => {
+    const link = document.createElement('a');
+    link.href = path;
+    link.download = title;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -96,7 +101,7 @@ const About = () => {
                     </div>
                     <Button 
                       size="sm" 
-                      onClick={() => handleDownload(statement.year)}
+                      onClick={() => handleDownload(statement.path, statement.title)}
                       className="shadow-soft hover:shadow-medium transition-all"
                     >
                       <Download className="h-4 w-4 mr-2" />
