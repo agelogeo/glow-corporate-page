@@ -12,7 +12,7 @@ const Navigation = () => {
             <div className="p-2 rounded-lg bg-gradient-tech shadow-glow group-hover:shadow-medium transition-all duration-300">
               <Code2 className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold bg-gradient-tech bg-clip-text text-transparent">
+            <span className="text-xl font-bold text-foreground">
               Codebase Apps
             </span>
           </Link>

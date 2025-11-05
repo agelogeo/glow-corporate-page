@@ -32,13 +32,6 @@ const Index = () => {
                 Learn More
               </Button>
             </Link>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20 hover:border-primary-foreground/30 shadow-soft"
-            >
-              Get Started
-            </Button>
           </div>
         </div>
       </section>
