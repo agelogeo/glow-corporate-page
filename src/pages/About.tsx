@@ -1,4 +1,4 @@
-import { FileText, Download, Calendar } from "lucide-react";
+import { FileText, Download, Calendar, Building2, Users, Shield } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -28,11 +28,11 @@ const About = () => {
       
       <main className="container mx-auto px-6 pt-32 pb-20">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          {/* Company Info Section */}
+          {/* Company Header */}
           <Card className="shadow-medium border-border/50 bg-card/95 backdrop-blur">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold">About Codebase Apps</CardTitle>
-              <CardDescription>Building innovative software solutions</CardDescription>
+              <CardTitle className="text-3xl font-bold">Codebase Apps ΜΟΝ.Ι.Κ.Ε.</CardTitle>
+              <CardDescription>Μονοπρόσωπη Ιδιωτική Κεφαλαιουχική Εταιρία</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
@@ -44,30 +44,133 @@ const About = () => {
                   combine functionality with beautiful design.
                 </p>
               </div>
+            </CardContent>
+          </Card>
 
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Company Details</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <p className="text-muted-foreground">Founded</p>
-                    <p className="font-medium">2024</p>
-                  </div>
-                  <div>
-                    <p className="text-muted-foreground">Location</p>
-                    <p className="font-medium">Global</p>
-                  </div>
-                  <div>
-                    <p className="text-muted-foreground">Specialization</p>
-                    <p className="font-medium">Software Development</p>
-                  </div>
-                  <div>
-                    <p className="text-muted-foreground">Team Size</p>
-                    <p className="font-medium">Growing</p>
+          {/* Company Registration Details */}
+          <Card className="shadow-medium border-border/50 bg-card/95 backdrop-blur">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold">Company Registration</CardTitle>
+              <CardDescription>Official registration information</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div>
+                  <p className="text-muted-foreground mb-1">Address</p>
+                  <p className="font-medium">Δημητρίου Γληνού 5Α</p>
+                  <p className="font-medium">546 28, Μενεμένη</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-1">Municipality</p>
+                  <p className="font-medium">Μενεμένη - Αμπελοκήπων</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-1">Region</p>
+                  <p className="font-medium">Θεσσαλονίκης</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-1">Tax ID (ΑΦΜ)</p>
+                  <p className="font-medium">801825022</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-1">Tax Office (ΔΟΥ)</p>
+                  <p className="font-medium">Αμπελοκήπων</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-1">GEMI (Γ.Ε.Μ.Η.)</p>
+                  <p className="font-medium">164043006000</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-1">Foundation Date</p>
+                  <p className="font-medium">05/05/2022</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-1">Expiry Date</p>
+                  <p className="font-medium">05/05/2052</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-1">Share Capital</p>
+                  <p className="font-medium">3.000€</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Company Structure */}
+          <Card className="shadow-medium border-border/50 bg-card/95 backdrop-blur">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold">Company Structure</CardTitle>
+              <CardDescription>Management and ownership information</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="p-4 rounded-lg bg-secondary/30 border border-border/50">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-primary/10">
+                      <Users className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-lg">Georgios Angelopoulos</p>
+                      <p className="text-sm text-muted-foreground">ΔΙΑΧΕΙΡΙΣΤΗΣ (Manager)</p>
+                      <div className="grid grid-cols-2 gap-4 mt-3 text-sm">
+                        <div>
+                          <p className="text-muted-foreground">Tax ID (ΑΦΜ)</p>
+                          <p className="font-medium">163753772</p>
+                        </div>
+                        <div>
+                          <p className="text-muted-foreground">Start Date</p>
+                          <p className="font-medium">05/05/2022</p>
+                        </div>
+                        <div>
+                          <p className="text-muted-foreground">Ownership</p>
+                          <p className="font-medium">100%</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </CardContent>
           </Card>
+
+          {/* Quick Links Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Card className="shadow-medium border-border/50 bg-card/95 backdrop-blur hover:shadow-elevated transition-all cursor-pointer group">
+              <CardContent className="pt-6">
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div className="p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <Building2 className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg">Business Registry</h3>
+                  <p className="text-sm text-muted-foreground">GEMI: 164043006000</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-medium border-border/50 bg-card/95 backdrop-blur hover:shadow-elevated transition-all cursor-pointer group">
+              <CardContent className="pt-6">
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div className="p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <Shield className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg">Legal Status</h3>
+                  <p className="text-sm text-muted-foreground">Active since 2022</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-medium border-border/50 bg-card/95 backdrop-blur hover:shadow-elevated transition-all cursor-pointer group">
+              <CardContent className="pt-6">
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div className="p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <FileText className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg">Financial Reports</h3>
+                  <p className="text-sm text-muted-foreground">View statements below</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
 
           {/* Annual Statements Section */}
           <Card className="shadow-medium border-border/50 bg-card/95 backdrop-blur">
